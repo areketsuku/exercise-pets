@@ -8,7 +8,8 @@ body {
   font-weight: 700;
 }
 header {
-  padding: 13px 40px;
+  position: relative;
+  padding: 13px 20px;
   width: 100%;
   height: 70px;
   display: flex;
@@ -16,30 +17,89 @@ header {
   align-items: center;
   box-shadow: 0 0 10px #7b7b7b80;
 }
+@media (min-width: 700px) {
+  header {
+    padding: 13px 40px;
+  }
+}
 .header_logo {
   width: auto;
   height: 100%;
 }
-.navigation {
+.menuIcon {
+  width: 30px;
+  height: 25px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 30px;
+  justify-content: space-between;
+}
+@media (min-width: 700px) {
+  .menuIcon {
+    display: none;
+  }
+}
+.menuIcon_bar {
+  border-radius: 30px;
+  height: 4px;
+  width: 100%;
+  background-color: black;
+}
+#menu {
+  display: none;
+}
+.navigation {
+  display: none;
+}
+#menu:checked ~ .navigation {
+  position: absolute;
+  right: 0;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 700px) {
+  .navigation {
+    position: initial;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
 }
 a {
   text-decoration: none;
   color: black;
 }
-.navigation_link:hover {
-  text-decoration: underline 2px;
+.navigation_link {
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #7b7b7b80;
+}
+@media (min-width: 700px) {
+  .navigation_link {
+    border: 0;
+  }
+  .navigation_link:hover {
+    text-decoration: underline 2px;
+  }
 }
 .navigation_button {
-  padding: 10px 20px;
-  border: 3px solid #ed6436;
-  border-radius: 0 30px 30px 30px;
-  font-weight: 600;
-  transition: all 0.2s;
+  display: none;
 }
-.navigation_button:active {
-  color: white;
-  background-color: #ed6436;
+@media (min-width: 700px) {
+  .navigation_button {
+    display: inherit;
+    padding: 10px 20px;
+    border: 3px solid #ed6436;
+    border-radius: 0 30px 30px 30px;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+}
+@media (min-width: 700px) {
+  .navigation_button:active {
+    color: white;
+    background-color: #ed6436;
+  }
 }
