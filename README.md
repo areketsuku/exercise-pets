@@ -1,4 +1,4 @@
-# Exercise 
+# Exercise
 
 (beware: This challenge is not complete yet, I'm working on it)
 
@@ -7,6 +7,10 @@ This is a rework of a challenge from ISDI Coders fullstack bootcamp. I've choose
 ## Objective
 
 Using only HTML & CSS, create a page as close to the reference (mobile & desktop).
+
+## Notes
+
+Menu dropdown on mobile it's done with the checkbox trick only for demonstration purposes.
 
 ### Production link:
 
